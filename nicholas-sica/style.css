@@ -7,15 +7,24 @@
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
 body {
     font: normal normal 24px 'Kanit';
     background-color: rgb(235, 235, 235);
 }
 
 header {
+    scroll-snap-align: start;
     display: block;
     height: 300px;
-    border-radius: 0px 0px 20px 20px;
     margin-bottom: 100px;
 }
 
@@ -23,7 +32,6 @@ header .fundo {
     height: 100%;
     width: 100%;
     background-color: black;
-    border-radius: 0px 0px 20px 20px;
 }
 
 header .fundo img {
@@ -31,7 +39,6 @@ header .fundo img {
     width: 100%;
     filter: grayscale(50);
     opacity: 30%;
-    border-radius: 0px 0px 20px 20px;
 }
 
 header .texto {
@@ -45,8 +52,8 @@ header .texto {
 
 iframe {
     display: block;
-    width: 800px;
-    height: 450px;
+    width: 60%;
+    height: 30vw;
     overflow-y: hidden;
     margin: auto;
 }
@@ -60,6 +67,7 @@ li {
 .sec {
     box-sizing: content-box;
     padding: 50px;
+    scroll-snap-align: start;
 }
 
 .sec:nth-child(odd) {
@@ -67,8 +75,8 @@ li {
 }
 
 .cell {
-    width: 366px;
-    height: 667px;
+    width: 435px;
+    height: 715px;
     margin: 50px auto;
 }
 
@@ -90,4 +98,17 @@ button {
 
 button:hover {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.397) inset;
+}
+
+@media (max-width: 800px) {
+
+    iframe {
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .cell {
+        min-width: 60vw;
+        min-height: 120vw;
+    }
 }
