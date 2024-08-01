@@ -123,11 +123,6 @@ footer a:hover {
         margin-bottom: 100px;
     }
 
-    .sec:hover {
-        transform: scale(1.06);
-        transition: transform 0.3s;
-    }
-
     /* .sec img:hover {
         transform: scale(1.06);
         transition: transform 0.3s;
